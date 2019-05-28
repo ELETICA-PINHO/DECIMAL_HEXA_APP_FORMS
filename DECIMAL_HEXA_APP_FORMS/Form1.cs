@@ -18,8 +18,7 @@ namespace DECIMAL_HEXA_APP_FORMS
         }
 
         
-        int Ndecimal;
-        int Nhexa;
+        
         char[] vetor_Hexa = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
         char convertQ = ' ';
         char convertR = ' ';
@@ -53,20 +52,55 @@ namespace DECIMAL_HEXA_APP_FORMS
                     convert_quociente = N_digitado / base_divisor;
                     convert_resto = N_digitado % base_divisor;
 
-                    if (N_digitado <= 256) // ATE 256 DECIMAIS
+               
+
+
+                    if (N_digitado <= 255) // ATE 256 DECIMAIS
                     {
-                        convertQ = vetor_Hexa[convert_quociente];   //VETOR CONVERSÃO
-                        convertR = vetor_Hexa[convert_resto];       //VETOR CONVERSÃO
-                        convert = Convert.ToString(convertQ) + Convert.ToString(convertR);  //MONTAGEM HEXA AT 256
-                       
+
+                        if (convert_resto >= 0 || convert_resto <= 15)
+                        {
+                            convertR = vetor_Hexa[convert_resto];
+                            convert = Convert.ToString(convertR);
+                            label_Numero_hexa.Text = convert.ToString();
+
+                        }
+
+                        if(N_digitado >= 16)
+                        {
+                            convertQ = vetor_Hexa[convert_quociente];   //VETOR  para conversao CONVERSÃO numero  convert_quociente  resultado na busca do vertor
+                            convertR = vetor_Hexa[convert_resto];       //VETOR CONVERSÃO     
+
+                            convert = Convert.ToString(convertQ) + Convert.ToString(convertR);
+                            label_Numero_hexa.Text = convert.ToString();
+
+                        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     }
 
-
-
-                    if (N_digitado > 256)
+                   
+                    if (N_digitado >= 256)
                     {
                         quociente1 = convert_quociente;
                         resto1 = vetor_Hexa[convert_resto];  //menos sequinativo 3
+
 
                         if (convert_quociente >= 16)
                         {
@@ -77,11 +111,11 @@ namespace DECIMAL_HEXA_APP_FORMS
 
                         convert = Convert.ToString(convertQ) + Convert.ToString(convertR) + Convert.ToString(resto1);
                         //                                1                            2                             3
-
+                        label_Numero_hexa.Text = convert.ToString();
                     }
 
 
-                    label_Numero_hexa.Text = convert.ToString();
+                    
 
 
                 } // if 0 300
@@ -101,6 +135,11 @@ namespace DECIMAL_HEXA_APP_FORMS
             }
 
 
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
     }
