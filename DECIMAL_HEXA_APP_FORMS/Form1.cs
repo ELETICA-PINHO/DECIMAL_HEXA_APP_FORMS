@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace DECIMAL_HEXA_APP_FORMS
 {
@@ -141,6 +142,38 @@ namespace DECIMAL_HEXA_APP_FORMS
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkLabel_Instagram_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+            Process.Start("https://www.instagram.com/eletricapinho/");
+
+        }
+
+        private void linkLabel_facebook_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://www.facebook.com/El%C3%A9trica-Pinho-1309240619096347/");
+
+        }
+
+        private void linkLabel_youtube_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://www.youtube.com/channel/UCfwWEXZmV9y3PZhtJIJTAzA/videos?view_as=subscriber");
+            Process.Start("https://www.youtube.com/channel/UCNEZXz8YNibbAG45imenfWA/videos?view_as=subscriber");
+
+        }
+
+        private void linkLabel_blogspot_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://eletrica-pinho.blogspot.com/");
+            Process.Start("https://eletricapinho.wordpress.com/");
+
+        }
+
+        private void button_limpar_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

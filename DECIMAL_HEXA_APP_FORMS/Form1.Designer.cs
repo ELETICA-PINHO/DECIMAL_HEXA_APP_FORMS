@@ -34,11 +34,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label_Numero_hexa = new System.Windows.Forms.Label();
             this.button_convert = new System.Windows.Forms.Button();
-            this.button_limpar = new System.Windows.Forms.Button();
             this.linkLabel_Instagram = new System.Windows.Forms.LinkLabel();
             this.linkLabel_facebook = new System.Windows.Forms.LinkLabel();
             this.linkLabel_youtube = new System.Windows.Forms.LinkLabel();
             this.linkLabel_blogspot = new System.Windows.Forms.LinkLabel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -97,15 +104,6 @@
             this.button_convert.UseVisualStyleBackColor = true;
             this.button_convert.Click += new System.EventHandler(this.button_convert_Click);
             // 
-            // button_limpar
-            // 
-            this.button_limpar.Location = new System.Drawing.Point(382, 118);
-            this.button_limpar.Name = "button_limpar";
-            this.button_limpar.Size = new System.Drawing.Size(75, 23);
-            this.button_limpar.TabIndex = 6;
-            this.button_limpar.Text = "Limpar";
-            this.button_limpar.UseVisualStyleBackColor = true;
-            // 
             // linkLabel_Instagram
             // 
             this.linkLabel_Instagram.AutoSize = true;
@@ -115,6 +113,7 @@
             this.linkLabel_Instagram.TabIndex = 7;
             this.linkLabel_Instagram.TabStop = true;
             this.linkLabel_Instagram.Text = "Instagram ";
+            this.linkLabel_Instagram.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_Instagram_LinkClicked);
             // 
             // linkLabel_facebook
             // 
@@ -125,6 +124,7 @@
             this.linkLabel_facebook.TabIndex = 8;
             this.linkLabel_facebook.TabStop = true;
             this.linkLabel_facebook.Text = "Facebook";
+            this.linkLabel_facebook.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_facebook_LinkClicked);
             // 
             // linkLabel_youtube
             // 
@@ -135,6 +135,7 @@
             this.linkLabel_youtube.TabIndex = 9;
             this.linkLabel_youtube.TabStop = true;
             this.linkLabel_youtube.Text = "YouTube";
+            this.linkLabel_youtube.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_youtube_LinkClicked);
             // 
             // linkLabel_blogspot
             // 
@@ -145,17 +146,58 @@
             this.linkLabel_blogspot.TabIndex = 10;
             this.linkLabel_blogspot.TabStop = true;
             this.linkLabel_blogspot.Text = "Blogspot";
+            this.linkLabel_blogspot.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_blogspot_LinkClicked);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::DECIMAL_HEXA_APP_FORMS.Properties.Resources.blogspot_300x298;
+            this.pictureBox4.Location = new System.Drawing.Point(368, 277);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(49, 50);
+            this.pictureBox4.TabIndex = 14;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::DECIMAL_HEXA_APP_FORMS.Properties.Resources.yt_1200_vfl4C3T0K;
+            this.pictureBox3.Location = new System.Drawing.Point(245, 264);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(68, 52);
+            this.pictureBox3.TabIndex = 13;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DECIMAL_HEXA_APP_FORMS.Properties.Resources.fb_icon_325x325;
+            this.pictureBox2.Location = new System.Drawing.Point(144, 277);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(69, 50);
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DECIMAL_HEXA_APP_FORMS.Properties.Resources.download__2_;
+            this.pictureBox1.Location = new System.Drawing.Point(24, 277);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(66, 50);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(505, 450);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(519, 450);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.linkLabel_blogspot);
             this.Controls.Add(this.linkLabel_youtube);
             this.Controls.Add(this.linkLabel_facebook);
             this.Controls.Add(this.linkLabel_Instagram);
-            this.Controls.Add(this.button_limpar);
             this.Controls.Add(this.button_convert);
             this.Controls.Add(this.label_Numero_hexa);
             this.Controls.Add(this.label3);
@@ -163,9 +205,16 @@
             this.Controls.Add(this.textBox_Decimal);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(525, 43);
             this.Name = "Form1";
+            this.ShowIcon = false;
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,11 +228,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label_Numero_hexa;
         private System.Windows.Forms.Button button_convert;
-        private System.Windows.Forms.Button button_limpar;
         private System.Windows.Forms.LinkLabel linkLabel_Instagram;
         private System.Windows.Forms.LinkLabel linkLabel_facebook;
         private System.Windows.Forms.LinkLabel linkLabel_youtube;
         private System.Windows.Forms.LinkLabel linkLabel_blogspot;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
 
